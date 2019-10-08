@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> //
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+    <div>
+        <form action="" method="post">
+            <div class="form-group">
+                <span>{{ form.keyword(class = "btn btn-primary" , size=200) }}</span>
+                <center>
+                    <span>{{ form.search(class ="btn btn-success") }}</span></center>
+            </div>
+        </form>
+    </div>
+    <center>
+        <div>
+            {% if keyword %}
+
+
+
+            <div>
+                {% for url in urls %}
+                <span>
+                    <a href= {{ url }}>
+                        <img style="margin-bottom: 90px ; margin-right: 10px ; margin-left: 10px " class="img-rounded" height=400 width=400 src={{ url }} >
+                    </a>
+                    </span> {% endfor %}
+            </div>
+            {% else %} {% endif %}
+        </div>
+    </center>
+</body>
+
+</html>
